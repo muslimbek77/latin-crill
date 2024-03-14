@@ -71,7 +71,7 @@ class Database:
     def delete_users(self):
         self.execute("DELETE FROM Users WHERE TRUE", commit=True)
     
-    def all_users_id(self):
+    async def all_users_id(self):
         return self.execute("SELECT telegram_id FROM Users;", fetchall=True)
 
 
